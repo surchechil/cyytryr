@@ -1,48 +1,45 @@
-# Tiny Tapeout project information
+
+
 project:
-  title:        ""      # Project title
-  author:       ""      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
-  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+  title:        "8-Key Synthesizer for Audio PMOD"
+  author:       "surchechil"
+  discord:      ""
+  description:  "Basic track musical instrument: 8-key square wave synth with debouncing"
+  language:     "Verilog"
+  clock_hz:     10000000 
 
-  # How many tiles your design occupies? A single tile is about 167x108 uM.
-  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+  
+  tiles: "1x1"
 
-  # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_example"
 
-  # List your project's source files here.
-  # Source files must be in ./src and you must list each source file separately, one per line.
-  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  top_module:  "tt_um_surchechil_synth"
+
   source_files:
     - "project.v"
 
-# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
-# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
-  # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
 
-  # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  ui[0]: "Key C4 (Do)"
+  ui[1]: "Key D4 (Re)"
+  ui[2]: "Key E4 (Mi)"
+  ui[3]: "Key F4 (Fa)"
+  ui[4]: "Key G4 (Sol)"
+  ui[5]: "Key A4 (La)"
+  ui[6]: "Key B4 (Si)"
+  ui[7]: "Key C5 (Do2)"
 
-  # Bidirectional pins
+  # Выходы под Audio PMOD и индикацию
+  uo[0]: "Audio (Mirror)"
+  uo[1]: "LED Active"
+  uo[2]: "nc"
+  uo[3]: "nc"
+  uo[4]: "nc"
+  uo[5]: "nc"
+  uo[6]: "Audio PMOD Left"
+  uo[7]: "Audio PMOD Right/Mono"
+
+
+  
   uio[0]: ""
   uio[1]: ""
   uio[2]: ""
@@ -52,5 +49,4 @@ pinout:
   uio[6]: ""
   uio[7]: ""
 
-# Do not change!
 yaml_version: 6
