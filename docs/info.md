@@ -8,13 +8,13 @@ You can also include images in this folder and reference them in the markdown. E
 -->
 8-key synthesizer for Tiny Tapeout
 ## How it works
-
+idk (yet)
 Explain how your project works
 
 ## How to test
-
+idk(still)
 Explain how to use your project
 
 ## External hardware
-
+recommended
 List external hardware used in your project (e.g. PMOD, LED display, etc), if any
