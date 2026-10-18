@@ -1,45 +1,44 @@
-
-
+# Tiny Tapeout project information
 project:
-  title:        "8-Key Synthesizer for Audio PMOD"
+  title:        "8-Key Synthesizer"
   author:       "surchechil"
   discord:      ""
   description:  "Basic track musical instrument: 8-key square wave synth with debouncing"
   language:     "Verilog"
-  clock_hz:     10000000 
+  clock_hz:     10000000
 
-  
+  # How many tiles your design occupies?
   tiles: "1x1"
 
-
+  # Top module name
   top_module:  "tt_um_surchechil_synth"
 
   source_files:
     - "project.v"
 
+# Pinout 
 pinout:
+  # Inputs
+  ui[0]: "key_c4"
+  ui[1]: "key_d4"
+  ui[2]: "key_e4"
+  ui[3]: "key_f4"
+  ui[4]: "key_g4"
+  ui[5]: "key_a4"
+  ui[6]: "key_b4"
+  ui[7]: "key_c5"
 
-  ui[0]: "Key C4 (Do)"
-  ui[1]: "Key D4 (Re)"
-  ui[2]: "Key E4 (Mi)"
-  ui[3]: "Key F4 (Fa)"
-  ui[4]: "Key G4 (Sol)"
-  ui[5]: "Key A4 (La)"
-  ui[6]: "Key B4 (Si)"
-  ui[7]: "Key C5 (Do2)"
+  # Outputs
+  uo[0]: "audio_mirror"
+  uo[1]: "led_active"
+  uo[2]: ""
+  uo[3]: ""
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: "audio_l"
+  uo[7]: "audio_r"
 
-  # Выходы под Audio PMOD и индикацию
-  uo[0]: "Audio (Mirror)"
-  uo[1]: "LED Active"
-  uo[2]: "nc"
-  uo[3]: "nc"
-  uo[4]: "nc"
-  uo[5]: "nc"
-  uo[6]: "Audio PMOD Left"
-  uo[7]: "Audio PMOD Right/Mono"
-
-
-  
+  # Bidirectional pins
   uio[0]: ""
   uio[1]: ""
   uio[2]: ""
@@ -49,4 +48,5 @@ pinout:
   uio[6]: ""
   uio[7]: ""
 
+# Do not change!
 yaml_version: 6
